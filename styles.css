@@ -1,3 +1,193 @@
+
 /* styles.css */
 
 /* Add styles here to customize the appearance of your app */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+nav{
+    position: left;
+    width: 70px;
+    margin-top: 0px;
+    transition: all 0.3s linear;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
+  }
+  nav li{
+    height: 60px;
+    position:left;
+  }
+  nav li a{
+    color: white;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    padding-left:0%;
+    border-bottom: 1px solid rgba(0,0,0,.4);
+    transition: all .3s linear;
+  }
+  nav li:nth-child(1) a{
+    background: #4267B2;
+  }
+  nav li:nth-child(2) a{
+    background: #1DA1F2;
+  }
+  nav li:nth-child(3) a{
+    background: #E1306C;
+  }
+  nav li:nth-child(4) a{
+    background: #2867B2;
+  }
+  nav li:nth-child(5) a{
+    background: #333;
+  }
+  nav li:nth-child(6) a{
+    background: #ff0000;
+  }
+  nav li a i{
+    position:left;
+    top: 0px;
+    left: 0px;
+    right: 50px;
+    font-size: 27px;
+  }
+  ul li a span{
+    
+    display: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  a:hover {
+    z-index:1;
+    width: 200px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+  }
+  ul li:hover a span{
+    padding-left: 0%;
+    display: block;
+  }
+body{
+  font-family: 'Montserrat', sans-serif;
+  background: url(bg.jpeg);
+  background-position: left;
+  background-size: cover;
+  height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #222;
+    background-image: url(
+        "https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
+            
+    font-size: 120%;
+  }
+  
+  .card {
+    background: white;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3))
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+  }
+  
+  button:hover {
+    background: #7c7c7c6b;
+  }
+  
+  h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+  
+  .weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+  
+  .weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+  .date-container{
+    font-weight: 100;
+}
+.date-container .time{
+    font-size: 70px;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
+
+.place-container{
+    text-align: center
+}
