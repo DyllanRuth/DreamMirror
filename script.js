@@ -1,3 +1,9 @@
+
+
+
+
+
+
 let weather = {
     apiKey: "a9130706bd4d4cb57ea1c2f5678cac71",
     fetchWeather: function (city) {
@@ -33,8 +39,7 @@ let weather = {
       document.querySelector(".wind").innerText =
         "Wind speed: " + speed + " km/h";
       document.querySelector(".weather").classList.remove("loading");
-      document.body.style.backgroundImage =
-        "url('https://source.unsplash.com/collection/1499877/480x480" + name + "')";
+      
     },
     search: function () {
       this.fetchWeather(document.querySelector(".search-bar").value);
@@ -44,7 +49,61 @@ let weather = {
   document.querySelector(".search button").addEventListener("click", function () {
     weather.search();
   });
-  
+const timeElement = document.querySelector(".time");
+const dateElement = document.querySelector(".date");
+
+/**
+ * @param {Date} date
+ */
+function formatTime(date) {
+  const hours12 = date.getHours() % 12 || 12;
+  const minutes = date.getMinutes();
+  const isAm = date.getHours() < 12;
+
+  return `${hours12.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
+}
+
+/**
+ * @param {Date} date
+ */
+function formatDate(date) {
+  const DAYS = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  const MONTHS = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+
+  return `${DAYS[date.getDay()]}, ${
+    MONTHS[date.getMonth()]
+  } ${date.getDate()} ${date.getFullYear()}`;
+}
+
+setInterval(() => {
+  const now = new Date();
+
+  timeElement.textContent = formatTime(now);
+  dateElement.textContent = formatDate(now);
+}, 200);
   document
     .querySelector(".search-bar")
     .addEventListener("keyup", function (event) {
