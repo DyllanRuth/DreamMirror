@@ -1,4 +1,5 @@
 
+
 /* styles.css */
 
 /* Add styles here to customize the appearance of your app */
@@ -91,9 +92,20 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     background: #222;
-    background-image: url(
-        "https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
-            
+   
+    display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	/* The image used */
+    background-image: url("tasks2.jpg");
+  
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 120%;
   }
   
@@ -167,27 +179,30 @@ body {
   .weather.loading:after {
     visibility: visible;
     content: "Loading...";
-    color: white;
+    color: black;
     position: absolute;
     top: 0;
     left: 20px;
   }
-  .date-container{
+  
+
+
+.datetime{
+    
+    font-size: 45px;
+    font-weight: 50
+    font-family: "Roboto";
     font-weight: 100;
-}
-.date-container .time{
-    font-size: 70px;
+    margin-left: 1000px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 90px;
+    color: white;
+    webkit-font-smoothing: antialiased;
 }
 
-.date-container #am-pm{
-    font-size: 30px;
-    margin-left: 20px;
-}
-
-.date-container .date{
-    font-size: 30px;
-}
 
 .place-container{
-    text-align: center
+    text-align: right
 }
