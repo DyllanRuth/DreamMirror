@@ -148,7 +148,7 @@ main {
 
 
 
-#tasks .task . content .text:not(:read-only) {
+#tasks .task .content .text:not(:read-only) {
     color: var(--grey);
 }
 
@@ -175,7 +175,7 @@ main {
     color: var(--purple);
 }
 
-#tasks .task actions{
+#tasks .task .actions{
     display: flex;
     margin: 0 -0.5rem;
 }
@@ -217,7 +217,7 @@ main {
 .datetime{
     
     font-size: 30px;
-    font-weight: 50
+    font-weight: 50;
     font-family: "Roboto";
     font-weight: 100;
     margin-left: 1300px;
