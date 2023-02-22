@@ -1,0 +1,269 @@
+
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+:root {
+     
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body { 
+    
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	/* The image used */
+    background-image: url("tasks2.jpg");
+  
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+
+
+/* a:hover {
+        opacity: 0.8;
+    } */
+}
+<!-- HTML !-->
+<button class="button-1" role="button">Button 1</button>
+
+/* CSS */
+.button-1 {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+}
+
+.video {
+	content-visibility: hidden;
+}
+/*Task List header*/
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+/* Big Tasks List header*/
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--light);
+	margin-bottom: 1rem;
+}
+
+/*Task List input form*/
+#new-task-form {
+	display: flex;;
+}
+/*Task List button and input with no styling*/
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+/*Task List input*/
+#new-task-input {
+	flex: 1 1 0%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+    color: var(--dark);
+	font-size: 1.25rem;
+}
+
+/*Task List input message*/
+#new-task-input::placeholder {
+	color: var(--grey);
+}
+/*Task List submit button*/
+#new-task-submit {
+	color: var(--pink);
+	font-size: 1.25rem;
+	font-weight: 700;
+    background-image: linear-gradient(to right, var(--dark), var(--grey));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+/*Task List Submit fade when mouse is over it*/
+#new-task-submit:hover {
+	opacity: 0.5;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+    padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+/*Task List Created*/
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--light);
+	margin-bottom: 1rem;
+}
+
+/*Styling for Tasks inserted*/
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+    
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+
+    flex: 1 1 0%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+    color: var(--grey);
+	font-size: 1.25rem;
+}
+
+
+
+#tasks .task .content .text:not(:read-only) {
+    color: var(--grey);
+}
+
+#task .content {
+	flex: 1 1 0%;
+}
+
+/*So we can see the entire text like longer text*/ 
+#task .task .content {
+    flex: 1 1 0%;
+}
+
+/* Styling for task words */
+.task .content .text {
+	color: var(--dark);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+/*Styling when task is submitted*/
+#tasks .task content .text:not(:read-only){
+    color: var(--purple);
+}
+
+#tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+	color: white;
+}
+
+/*Date and time Styling*/
+
+.datetime{
+    
+    font-size: 30px;
+    font-weight: 50;
+    font-family: "Roboto";
+    font-weight: 100;
+    margin-left: 1300px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 90px;
+    color: white;
+    webkit-font-smoothing: antialiased;
+}
