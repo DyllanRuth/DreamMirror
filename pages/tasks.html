@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="shortcut icon" href="/assets/favicon.ico">
 	<title>Task List</title>
 
 	<link rel="stylesheet" href="styles.css" />
 </head>
 
 <div class="datetime">
-  <div class="time"></div>
-  <div class="date"></div>
+	<div class="time"></div>
+	<div class="date"></div>
 </div>
-<body>
-	
-  
- 
-  
-	<header>
-    <style>
-     
-      a {
-        
-    color: #0060B6;
-    text-decoration: none;
-}
 
-a:hover {
-    color:#00A0C6; 
-    text-decoration:none; 
-    cursor:pointer;  
-}
-      </style>
-    <a href="../index.html">Back</a>
+<body>
+
+
+
+
+	<header>
+		<style>
+			a {
+
+				color: #0060B6;
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: #00A0C6;
+				text-decoration: none;
+				cursor: pointer;
+			}
+		</style>
+		<a href="../index.html">Back</a>
 		<h1>Task List</h1>
 		<form id="new-task-form">
-			<input 
-				type="text" 
-				name="new-task-input" 
-				id="new-task-input" 
-				placeholder="What do you have planned?" />
-			<input 
-				type="submit"
-				id="new-task-submit" 
-				value="Add task" />
+			<input type="text" name="new-task-input" id="new-task-input" placeholder="What do you have planned?"
+				class="use-keyboard-input" />
+			<input type="submit" id="new-task-submit" value="Add task" />
 		</form>
 	</header>
 	<main>
-    
+
 		<section class="task-list">
 			<h2>Tasks</h2>
 
@@ -73,5 +70,7 @@ a:hover {
 	</main>
 
 	<script src="script2.js"></script>
+	<script src="../keyboard/keyboard.js"></script>
 </body>
+
 </html>
