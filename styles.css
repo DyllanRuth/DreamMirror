@@ -107,6 +107,20 @@ body {
   background: #222;
   background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
 
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #FFF;
+  /* The image used */
+  background-image: url("tasks2.jpg");
+
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 120%;
 }
 
