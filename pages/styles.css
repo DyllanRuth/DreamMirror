@@ -3,7 +3,7 @@
 /* Add styles here to customize the appearance of your app */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
 
 
 :root {
@@ -20,11 +20,12 @@
 * {
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Fira sans", sans-serif;
+	font-family: 'Poppins', sans-serif;
+
 }
 
 body {
-
+	
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -222,9 +223,9 @@ main {
 
 .datetime {
 
-	font-size: 30px;
+	font-size: 35px;
 	font-weight: 50;
-	font-family: "Roboto";
+	font-family: 'Poppins', sans-serif;
 	font-weight: 100;
 	margin-left: 1300px;
 	text-align: center;

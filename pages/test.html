@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DREAM MIRROR</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="test.js"></script>
+  
+    <link rel="stylesheet" href="test.css"> 
+</head>
+<a href="../index.html">Back</a>
+
+<body>
+  <div id="floating-panel">
+    <div>
+
+      <div>
+        <div>
+          <input type="text" id="from" placeholder="Origin" value="text">
+
+
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <input type="text" id="to" placeholder="Destination" value="text">
+        </div>
+      </div>
+      <b>Mode of Travel</b>
+      <select id="mode">
+        <option value="DRIVING">Driving</option>
+        <option value="WALKING">Walking</option>
+        <option value="BICYCLING">Bicycling</option>
+        <option value="TRANSIT">Transit</option>
+        <input type="submit" id="submit"
+           />
+      </select>
+
+    </div>
+    <!--Floating panel Div-->
+  </div>
+
+
+    <div id="map"></div>
+
+
+
+
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrT3Xs7zvfuWyBbCjFmcWaQnqwfZvSJw&callback=initMap" async defer></script>
+
+</body>
+
+</html>
