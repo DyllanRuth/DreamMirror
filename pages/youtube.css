@@ -81,7 +81,7 @@ main {
 	webkit-font-smoothing: antialiased;
 }
 
-//keyboard styling
+/* keyboard styling */
 .keyboard {
     position: fixed;
     bottom: 0;

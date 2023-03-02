@@ -236,6 +236,8 @@ main {
 	webkit-font-smoothing: antialiased;
 }
 
+/* Keyboard Styling */
+
 .keyboard {
     position: fixed;
     bottom: 0;
