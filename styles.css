@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-nav {
+/* nav {
   position: absolute;
   left: 0;
   width: 70px;
@@ -88,6 +88,78 @@ a:hover {
 ul li:hover a span {
   padding-left: 0%;
   display: block;
+} */
+
+nav {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 80px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+
+nav .nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(490deg);
+}
+
+.nav-content .toggle-btn,
+.nav-content span a {
+  height: 60px;
+  width: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-content .toggle-btn {
+  font-size: 35px;
+  color: #0e2431;
+  z-index: 100;
+  cursor: pointer;
+  transform: rotate(-50deg);
+  transition: all 0.6s ease;
+}
+
+nav.open .toggle-btn {
+  transform: rotate(0);
+}
+
+.nav-content span {
+  position: absolute;
+  transition: all 0.6s ease;
+  opacity: 50;
+}
+
+nav.open .nav-content span {
+  opacity: 1;
+  transform: rotate(calc(var(--i) * (360deg / 8))) translateY(120px);
+}
+
+.nav-content span a {
+  text-decoration: none;
+  transform: rotate(230deg);
+}
+
+.nav-content span a i {
+  font-size: 24px;
+  color: #0e2431;
+  opacity: 0.8;
+  transition: 0.2s;
+  transform: rotate(calc(var(--i) * (360deg / -8)));
+}
+
+.nav-content span a:hover i {
+  opacity: 1;
 }
 
 body {
