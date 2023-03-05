@@ -1,0 +1,78 @@
+
+<html>
+  <head>
+    <title>DREAM MIRROR - Traffic </title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- playground-hide -->
+    <script>
+      const process = { env: {} };
+      process.env.GOOGLE_MAPS_API_KEY =
+        "AIzaSyCrrT3Xs7zvfuWyBbCjFmcWaQnqwfZvSJw";
+    </script>
+    <!-- playground-hide-end -->
+
+    <link rel="stylesheet" type="text/css" href="traffic.css" />
+    <script type="module" src="traffic.js"></script>
+
+    <div class="datetime">
+      <div class="time"></div>
+      <div class="date"></div>
+      
+      
+    </div>
+  </head>
+  <style>
+    a {
+
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #00A0C6;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <a href="../index.html">Back</a>
+  <body>
+    <div >
+      <div id="floating-panel">
+      <b>Start: </b>
+        
+        <input type="text" id="from"  placeholder="Enter a location" value= "Houston, TX">
+
+        <b>  <br>
+          End: </b>
+        <input type="text" id="to"  placeholder="Enter a destination" value= "Prairie View, TX">
+<input type="submit" id="submit">
+        
+<select id="mode">
+  <option value="DRIVING">Driving</option>
+  <option value="WALKING">Walking</option>
+  <option value="BICYCLING">Bicycling</option>
+  <option value="TRANSIT">Transit</option>
+</select>
+
+            
+
+            
+        </div>
+    </div>
+    <div id="map"></div>
+    &nbsp;
+    <!-- <div id="warnings-panel"></div> -->
+    <div id="directions-panel" style="width: 300px; float: right;"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrT3Xs7zvfuWyBbCjFmcWaQnqwfZvSJw&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
