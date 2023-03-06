@@ -126,7 +126,7 @@ nav .nav-content {
   color: #0e2431;
   z-index: 100;
   cursor: pointer;
-  transform: rotate(-50deg);
+  transform: rotate(-40deg);
   transition: all 0.6s ease;
 }
 
@@ -142,7 +142,7 @@ nav.open .toggle-btn {
 
 nav.open .nav-content span {
   opacity: 1;
-  transform: rotate(calc(var(--i) * (360deg / 8))) translateY(120px);
+  transform: rotate(calc(var(--i) * (360deg / 7.72))) translateY(120px);
 }
 
 .nav-content span a {
