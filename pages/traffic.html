@@ -3,6 +3,8 @@
 <head>
   <title>DREAM MIRROR - Traffic </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="traffic.css" />
 </head>
 <style>
@@ -62,9 +64,9 @@
   &nbsp;
   <!-- <div id="warnings-panel"></div> -->
   <div id="directions-panel" style="width: 300px; float: right;"></div>
-  <input type="text" id="origin-input" placeholder="Enter a location">
+  <input type="text" id="origin-input" placeholder="Enter a location" class="use-keyboard-input">
   <b> - </b>
-  <input type="text" id="destination-input" placeholder="Enter a destination">
+  <input type="text" id="destination-input" placeholder="Enter a destination" class="use-keyboard-input">
 
   <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
@@ -74,7 +76,7 @@
       -->
     <script src="traffic.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrT3Xs7zvfuWyBbCjFmcWaQnqwfZvSJw&callback=initMap&libraries=places&v=weekly" async defer></script>
-
+  <script src="../keyboard/keyboard.js"></script>
 
 </body>
 
