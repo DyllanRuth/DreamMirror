@@ -5,3 +5,16 @@
  * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
  * to expose Node.js functionality from the main process.
  */
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    let names = window.api.getNames();
+
+    let divNames = document.getElementById("names");
+
+    let nameString = names.join("<br />");
+    divNames.innerHTML = nameString;
+
+
+
+});
