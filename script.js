@@ -153,3 +153,54 @@ nav.addEventListener("mouseup", () => {
 nav.addEventListener("mouseleave", () => {
   nav.removeEventListener("mousemove", onDrag);
 });
+
+
+//--------Making the card draggable----------------
+
+const playerContainer = document.querySelector('.card');
+let isDragging = false;
+let currentX;
+let currentY;
+let initialX;
+let initialY;
+let xOffset = 0;
+let yOffset = 0;
+
+playerContainer.addEventListener('mousedown', dragStart);
+playerContainer.addEventListener('mouseup', dragEnd);
+playerContainer.addEventListener('mousemove', drag);
+
+function dragStart(event) {
+  initialX = event.clientX - xOffset;
+  initialY = event.clientY - yOffset;
+  
+  if (event.target === playerContainer) {
+    isDragging = true;
+  }
+}
+
+function dragEnd(event) {
+  initialX = currentX;
+  initialY = currentY;
+  
+  isDragging = false;
+}
+
+function drag(event) {
+  if (isDragging) {
+    event.preventDefault();
+    
+    currentX = event.clientX - initialX;
+    currentY = event.clientY - initialY;
+    
+    xOffset = currentX;
+    yOffset = currentY;
+    
+    setTranslate(currentX, currentY, playerContainer);
+  }
+}
+
+function setTranslate(xPos, yPos, el) {
+  el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+}
+

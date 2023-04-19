@@ -16,14 +16,3 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-const testmgr = require("./database/testmgr");
-
-const {contextBridge} = require("electron")
-
-const getNames = () => {
-  testmgr.getNames();
-}
-
-contextBridge.exposeInMainWorld("api", {
-  getNames: getNames
-})

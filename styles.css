@@ -90,6 +90,22 @@ ul li:hover a span {
   display: block;
 } */
 
+a {
+  top: 500px;
+  font-size: 25px;
+  font-family: 'Poppins';
+  webkit-font-smoothing: antialiased;
+  text-align: center;
+  /* position: relative; */
+  /* margin-left: 900px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 90px; */
+  
+}  
+
+
 nav {
   position: absolute;
   top: 20px;
@@ -154,7 +170,7 @@ nav.open .nav-content span {
   font-size: 24px;
   color: #0e2431;
   opacity: 0.8;
-  transition: 0.2s;
+  transition: 0.1s;
   transform: rotate(calc(var(--i) * (360deg / -8)));
 }
 
