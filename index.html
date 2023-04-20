@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dream Mirror | Login</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="shortcut icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="login.css">
 
-  <h1><center>DREAM MIRROR</center> </h1>
+  <h1>DREAM MIRROR</h1>
   
 </head>
 
@@ -23,11 +25,11 @@
 
         <h2>Sign In</h2>
         <div class="input-group">
-          <input id ="username1" type="text" required>
-          <label for="">Username</label>
+          <input id ="username1" type="text" class="use-keyboard-input" required/>
+          <label for="" >Username</label>
         </div>
         <div class="input-group">
-          <input id = "password1" type="password" required>
+          <input id ="password1" type="password" class="use-keyboard-input" required>
           <label for="">Password</label>
         </div>
         <div class="remember">
@@ -66,15 +68,15 @@
 
         <h2>Sign Up</h2>
         <div class="input-group">
-          <input id="username" type="text" required>
+          <input id="username" type="text" class="use-keyboard-input" required>
           <label for="">Username</label>
         </div>
         <div class="input-group">
-          <input id="email" type="email" required>
+          <input id="email" type="email" class="use-keyboard-input" required>
           <label for="">Email</label>
         </div>
         <div class="input-group">
-          <input id="password" type="password" required>
+          <input id="password" type="password" class="use-keyboard-input" required>
           <label for="">Password</label>
         </div>
         <div class="remember">
@@ -87,12 +89,10 @@
       </form>
     </div>
   </div>
-
-  
-
     
-
-  <script defer src="login.js"></script>
+<script src="../DreamMirror/keyboard/keyboard.js"></script>
+  <!-- <script src="login.js"></script>
+   -->
 </body>
 
 </html>

@@ -14,13 +14,13 @@
     text-decoration: none;
     font-size: 35px;
   }
-  
+
   a:hover {
     color: #00A0C6;
     text-decoration: none;
     cursor: pointer;
   }
-  
+
   html,
   body {
     height: 100%;
@@ -28,13 +28,11 @@
     padding: 0;
     margin: 0;
   }
-  
+
   #map {
     height: 80%;
     width: 50%;
   }
-
-  
 </style>
 
 <div class="datetime">
@@ -46,19 +44,14 @@
 <body>
   <div>
     <div id="floating-panel">
-      <b>Enter your Commute  </b>
-
-
-      <b>  <br>
-      
-
-      <select id="mode">
-        <option value="DRIVING">Driving</option>
-        <option value="WALKING">Walking</option>
-        <option value="BICYCLING">Bicycling</option>
-        <option value="TRANSIT">Transit</option>
-      </select>
-
+      <b>Enter your Commute </b>
+      <b> <br>
+        <select id="mode">
+          <option value="DRIVING">Driving</option>
+          <option value="WALKING">Walking</option>
+          <option value="BICYCLING">Bicycling</option>
+          <option value="TRANSIT">Transit</option>
+        </select>
     </div>
   </div>
   <div id="map"></div>
@@ -71,21 +64,18 @@
   <b> - </b>
   <input type="text" id="destination-input" placeholder="Enter a destination" class="use-keyboard-input">
 
-
-  
-
   <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
       document has been parsed. For non-blocking uses, avoiding race conditions,
       and consistent behavior across browsers, consider loading using Promises
       with https://www.npmjs.com/package/@googlemaps/js-api-loader.
       -->
-    <script src="traffic.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrT3Xs7zvfuWyBbCjFmcWaQnqwfZvSJw&callback=initMap&libraries=places&v=weekly" async defer></script>
+  <script src="traffic.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrT3Xs7zvfuWyBbCjFmcWaQnqwfZvSJw&callback=initMap&libraries=places&v=weekly"
+    async defer></script>
   <script src="../keyboard/keyboard.js"></script>
 
 </body>
 
 </html>
-
-

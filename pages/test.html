@@ -7,8 +7,8 @@
   <title>DREAM MIRROR</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <script src="test.js"></script>
-  
-    <link rel="stylesheet" href="test.css"> 
+
+  <link rel="stylesheet" href="test.css">
 </head>
 <a href="../homepage.html">Back</a>
 
@@ -18,37 +18,30 @@
 
       <div>
         <div>
-          <input type="text" id="from" placeholder="Origin" value="text"> 
+          <input type="text" id="from" placeholder="Origin" value="text">
         </div>
-        
-      
-
-      <div>
         <div>
-         <b> <input type="text" id="to" placeholder="Destination" value="text"></b>
+          <div>
+            <b> <input type="text" id="to" placeholder="Destination" value="text"></b>
+          </div>
         </div>
+        <b>Mode of Travel</b>
+        <select id="mode">
+          <option value="DRIVING">Driving</option>
+          <option value="WALKING">Walking</option>
+          <option value="BICYCLING">Bicycling</option>
+          <option value="TRANSIT">Transit</option>
+          <input type="submit" id="submit" />
+        </select>
+
       </div>
-      <b>Mode of Travel</b>
-      <select id="mode">
-        <option value="DRIVING">Driving</option>
-        <option value="WALKING">Walking</option>
-        <option value="BICYCLING">Bicycling</option>
-        <option value="TRANSIT">Transit</option>
-        <input type="submit" id="submit"/>
-      </select>
-
+      <!--Floating panel Div-->
     </div>
-    <!--Floating panel Div-->
-  </div>
-
-
     <div id="map"></div>
 
-
-
-
-
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrT3Xs7zvfuWyBbCjFmcWaQnqwfZvSJw&callback=initMap" async defer></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrT3Xs7zvfuWyBbCjFmcWaQnqwfZvSJw&callback=initMap" async
+      defer></script>
 
 </body>
 

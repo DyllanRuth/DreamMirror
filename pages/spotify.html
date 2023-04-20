@@ -1,102 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<a style="font: size 5px;" href="../homepage.html">Back</a> 
+<a style="font: size 5px;" href="../homepage.html">Back</a>
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link 
-  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-  rel="stylesheet"  type='text/css'>
-    
-      
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+    type='text/css'>
 </head>
 
 <link rel="stylesheet" href="spotify.css" />
 
+<body class="box"
+  style="background-image: url('https://static.spin.com/files/2023/01/Miley-Cyrus-Endless-Summer-Vacation.png');">
 
+  <div class="datetime">
+    <div class="time"></div>
+    <div class="date"></div>
+  </div>
 
+  <main class="player">
+    <div class="header">
+      <a href="#" class="button">
+        <!-- <i class="fas fa-bars"></i> -->
+        <i class="fa-solid fa-bars"></i>
+        <!-- <span class="sr-only">Menu Bar</span> -->
+      </a>
 
-<body class="box" style="background-image: url('https://static.spin.com/files/2023/01/Miley-Cyrus-Endless-Summer-Vacation.png');">
+      <p id="playing">Now Playing</p>
 
-    <div class="datetime">
-        <div class="time"></div>
-        <div class="date"></div>
+      <a href="#" class="button">
+        <label>
+          <input type="checkbox" name="theme">
+          <!-- <span class="btn sr-only">Search</span> -->
+          <i class="fas fa-moon"></i>
+        </label>
+      </a>
+    </div>
+    <img src="https://static.spin.com/files/2023/01/Miley-Cyrus-Endless-Summer-Vacation.png" alt="album" id="image"
+      class="image Flowers">
+    <div class="information">
+      <h1 id="playlist_status"></h1>
+      <p id="playlist_artist" class="Flowers"></p>
+    </div>
+    <div class="progress">
+      <div class="progress-time">
+        <span id="currenttimetext" class="left">00:00</span>
+        <span id="durationtimetext" class="right">00:00</span>
       </div>
-
-    <main class="player">
-      <div class="header">
-        <a href="#" class="button">
-          <!-- <i class="fas fa-bars"></i> -->
-          <i class="fa-solid fa-bars"></i>
-          <!-- <span class="sr-only">Menu Bar</span> -->
-        </a>
-  
-        <p id="playing">Now Playing</p>
-  
-        <a href="#" class="button">
-          <label>
-            <input type="checkbox" name="theme">
-            <!-- <span class="btn sr-only">Search</span> -->
-            <i class="fas fa-moon"></i>
-          </label>
-        </a>
+      <div class="progress-bar">
+        <input type="range" name="" id="seekslider" class="seekslider Flowers" min="0" max="100" value="0" step="1">
       </div>
-      <img src="https://static.spin.com/files/2023/01/Miley-Cyrus-Endless-Summer-Vacation.png" alt="album" id="image" class="image Flowers">
-      <div class="information">
-        <h1 id="playlist_status"></h1>
-        <p id="playlist_artist" class="Flowers"></p>
-      </div>
-      <div class="progress">
-        <div class="progress-time">
-          <span id="currenttimetext" class="left">00:00</span>
-          <span id="durationtimetext" class="right">00:00</span>
-        </div>
-        <div class="progress-bar">
-          <input type="range" name="" id="seekslider" class="seekslider Flowers" min="0" max="100" value="0" step="1">
-        </div>
-      </div>
-  
-      <ul class="buttons">
-        <span id="random" class="shuffle button button-sm">
-          <!-- <i class="fas fa-random fa-sm"></i> -->
-          <i class="fa fa-random" aria-hidden="true"></i>
+    </div>
 
-          
-        </span>
-        <span id="prevbtn" class="prev button button-md">
-          <!-- <i class="fas fa-step-backward"></i> -->
-          <i class="fa fa-step-backward" aria-hidden="true"></i>
+    <ul class="buttons">
+      <span id="random" class="shuffle button button-sm">
+        <!-- <i class="fas fa-random fa-sm"></i> -->
+        <i class="fa fa-random" aria-hidden="true"></i>
 
-        </span>
-        <span id="playpausebtn" class="playpause button button-lg">
-          <!-- <i class="fas fa-play fa-lg"></i>
+      </span>
+      <span id="prevbtn" class="prev button button-md">
+        <!-- <i class="fas fa-step-backward"></i> -->
+        <i class="fa fa-step-backward" aria-hidden="true"></i>
+
+      </span>
+      <span id="playpausebtn" class="playpause button button-lg">
+        <!-- <i class="fas fa-play fa-lg"></i>
           <i class="fas fa-pause fa-lg"></i> -->
-          <i class="fa fa-play" aria-hidden="true"></i>
+        <i class="fa fa-play" aria-hidden="true"></i>
 
-        </span>
-        <span id="nextbtn" class="next button button-md">
-          <!-- <i class="fas fa-step-forward"></i> -->
-          <i class="fa fa-step-forward" aria-hidden="true"></i>
+      </span>
+      <span id="nextbtn" class="next button button-md">
+        <!-- <i class="fas fa-step-forward"></i> -->
+        <i class="fa fa-step-forward" aria-hidden="true"></i>
 
-        </span>
-        <span id="repeat" class="loop button button-sm">
-          <i class="fa fa-repeat fa-sm"></i>
-        </span>
-      </ul>
-  
-      <div class="slider_container">
-        <i class="fa fa-volume-down" aria-hidden="true"></i>
+      </span>
+      <span id="repeat" class="loop button button-sm">
+        <i class="fa fa-repeat fa-sm"></i>
+      </span>
+    </ul>
 
-        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-        <i class="fa fa-volume-up"></i>
-      </div>
-  
-    </main>
-  </body>
+    <div class="slider_container">
+      <i class="fa fa-volume-down" aria-hidden="true"></i>
 
-  
-  <script type="text/javascript" src="spotify.js"></script>
+      <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>
 
-
+  </main>
+</body>
+<script type="text/javascript" src="spotify.js"></script>
 </html>
