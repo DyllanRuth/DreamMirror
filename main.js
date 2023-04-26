@@ -14,12 +14,7 @@ const path = require('path')
 // }).catch(function (err) {
 //   throw err;
 // });
-const electron = require("electron")
 
-electron.app.setLoginItemSettings({
-    openAtLogin: arg.settings.startOnStartup,
-    path: electron.app.getPath("exe")
-});
 
 function createWindow () {
   // Create the browser window.
