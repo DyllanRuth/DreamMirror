@@ -105,6 +105,155 @@ a {
   
 }  
 
+/* button1 {
+  position: relative;
+  width: 100%;
+  height: 2000px;
+  background: #fff;
+  font-size: 16px;
+  color: #5372F0;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+<!-- HTML !-->
+<button class="button-88" role="button">Button 88</button> */
+
+/* CSS */
+button1 {
+  position: relative;
+  width: 100%;
+  /* display: flex;
+  align-items: center;
+  font-family: inherit; */
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.5em 1.0em 0.5em 1.0em;
+  color: white;
+  background: #5372F0;
+  background-color: #06f;
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 10em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button1:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+button1:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.wrapper{
+  position: relative;
+  top: 70px;
+  left: 500px;
+  max-width: 350px;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3))
+  border-radius: 15px;
+  padding: 30px 30px 25px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+header, .content :where(i, p, span){
+  color: #202842;
+}
+.wrapper header{
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper .content{
+  margin: 35px 0;
+}
+.content .quote-area{
+  display: flex;
+  justify-content: center;
+}
+.quote-area i{
+  font-size: 15px;
+}
+.quote-area i:first-child{
+  margin: 3px 10px 0 0;
+}
+.quote-area i:last-child{
+  display: flex;
+  margin: 0 0 3px 10px;
+  align-items: flex-end;
+}
+.quote-area .quote{
+  font-size: 22px;
+  text-align: center;
+  word-break: break-all;
+}
+.content .author{
+  display: flex;
+  font-size: 18px;
+  margin-top: 20px;
+  font-style: italic;
+  justify-content: flex-end;
+}
+.author span:first-child{
+  margin: -7px 5px 0 0;
+  font-family: monospace;
+}
+.wrapper .buttons{
+  border-top: 1px solid #ccc;
+}
+.buttons .features{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.features ul{
+  display: flex;
+}
+.features ul li{
+  margin: 0 5px;
+  height: 47px;
+  width: 47px;
+  display: flex;
+  cursor: pointer;
+  color: #5372F0;
+  list-style: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #5372F0;
+  transition: all 0.3s ease;
+}
+.features ul li:first-child{
+  margin-left: 0;
+}
+ul li:is(:hover, .active){
+  color: #fff;
+  background: #5372F0;
+}
+ul .speech.active{
+  pointer-events: none;
+}
+.buttons button{
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 13px 22px;
+  border-radius: 30px;
+  background: #5372F0;
+}
+.buttons button.loading{
+  opacity: 0.7;
+  pointer-events: none;
+}
 
 nav {
   position: absolute;

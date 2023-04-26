@@ -111,7 +111,7 @@ function getUser() {
 	req.addEventListener("success", e => {
 		console.log("Get REQ Success: ", e.target.result)
 
-        alert("About to login " + nameInput);
+        // alert("About to login " + nameInput);
 		
 // 	// 	let users = e.target.result
 // 	// 	table.innerHTML = `<tr>

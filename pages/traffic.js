@@ -163,8 +163,30 @@ window.initMap = function() {
     }
   }
 
-  new AutocompleteDirectionsHandler(map); //<--------ERROR HERE
+  // //------------- Directon Code for Side panel---------------------
+  // this.directionsRenderer.setPanel(document.getElementById("directions"));
+
+
+  // function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  //   const start = document.getElementById("origin-input");
+  //   const end = document.getElementById("destination-input");
+  
+  //   directionsService
+  //     .route({
+  //       origin: start,
+  //       destination: end,
+  //       travelMode: google.maps.TravelMode.DRIVING,
+  //     })
+  //     .then((response) => {
+  //       directionsRenderer.setDirections(response);
+  //     })
+  //     .catch((e) => window.alert("Directions request failed"));
+  // }
+
+  new AutocompleteDirectionsHandler(map); 
 }
+
+
 
 window.initMap = initMap;
 
