@@ -1,6 +1,25 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, globalShortcut } = require('electron')
 const path = require('path')
+
+// var AutoLaunch = require('auto-launch');
+// var autoLauncher = new AutoLaunch({
+//     name: "MyApp",
+//     path: app.getPath('')
+// });
+// // Checking if autoLaunch is enabled, if not then enabling it.
+// autoLauncher.isEnabled().then(function(isEnabled) {
+//   if (isEnabled) return;
+//    autoLauncher.enable();
+// }).catch(function (err) {
+//   throw err;
+// });
+const electron = require("electron")
+
+electron.app.setLoginItemSettings({
+    openAtLogin: arg.settings.startOnStartup,
+    path: electron.app.getPath("exe")
+});
 
 function createWindow () {
   // Create the browser window.
